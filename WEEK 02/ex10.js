@@ -6,8 +6,12 @@ let record_arr = [
   { name: 'sam', kor: 90, math: 85, eng: 84 },
 ];
 
+// ------------------------------------------------------------
+
 // 과목 이름을 담는 배열 생성
 const subjects = ['kor', 'math', 'eng'];
+
+// ------------------------------------------------------------
 
 // 각 과목별로 새로운 객체 생성
 // subjectname 속성에 현재 과목명 저장
@@ -16,8 +20,8 @@ const subjects = ['kor', 'math', 'eng'];
 let record_arr2 = subjects.map((subject) => {
   // 현재 과목명 포함하는 새로운 객체 생성
   // subject 속성에 현재 과목명 저장
+  // -> map()함수의 콜백에서 매개변수 받아온 값->subjectname의 프로퍼티 값으로 저장
   let record = { subjectname: subject };
-
   record_arr.forEach((student) => {
     // 동적 프로퍼티 추가
     // 학생 객체의 현재 과목에 해당하는 성적을 record 객체에 추가

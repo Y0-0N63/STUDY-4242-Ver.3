@@ -23,7 +23,7 @@ record_arr.forEach(function (student, index) {
   student.rank = index + 1;
 });
 
-// 동점자 처리 (누적값/현재값)
+// reduce를 사용하여 동점자 처리 (누적값/현재값)
 let ranked_arr = record_arr.reduce((acc, student, index) => {
   // 현재 학생 점수 = 이전 학생 점수 -> 동점자
   if (index > 0 && student.total === acc[index - 1].total) {
