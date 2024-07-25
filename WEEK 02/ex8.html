@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex8s</title>
+    <style>
+      .sports {
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+      }
+
+      .rpg {
+        font-size: 15px;
+        font-weight: bold;
+        color: crimson;
+        border: 3px solid rgb(7, 72, 194);
+      }
+
+      #game6 {
+        font-size: 25px;
+        font-weight: bold;
+        color: crimson;
+        border: 3px dashed rgb(12, 247, 247);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="game1" class="sports" year="2022">NBA 2022</div>
+      <div id="game2" class="sports" year="2022">FIFA 2022</div>
+      <div id="game3" class="sports" year="2022">NFL 2022</div>
+
+      <br />
+      <br />
+
+      <div id="game4" class="rpg" year="2008">WoW</div>
+      <div id="game5" class="rpg" year="1990">Jelda</div>
+      <div id="game6" class="rpg" year="1998">diablo</div>
+      <div id="game7" year="2022">Marvel Fighter</div>
+    </div>
+
+    <script>
+      const game1Obj = document.querySelector('#game1');
+      game1Obj.innerHTML = 'NBA 2000';
+      // game1Obj.textContent = "NBA 2000";
+
+      game1Obj.setAttribute('year', '2000');
+      console.log(`game1Obj year attribute = ${game1Obj.getAttribute('year')}`);
+
+      const gameEls = document.querySelectorAll('.sports');
+      gameEls.forEach((el) => {
+        el.style.border = '1px solid blue';
+        el.style.padding = '24px';
+        el.style.width = '48px';
+      });
+
+      const game7Obj = document.getElementById('game7');
+      game7Obj.classList.add('rpg');
+
+      const rpggameEls = document.querySelector('.rpg');
+      rpggameEls.forEach((el) => {
+        console.log(el);
+      });
+
+      const hiddenObjs = document.querySelectorAll(".sports[year='2022']");
+      hiddenObjs.forEach((el) => {
+        e.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
