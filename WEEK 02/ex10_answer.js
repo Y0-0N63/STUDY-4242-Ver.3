@@ -14,12 +14,12 @@ for (let key in record_arr[0]) {
   }
 }
 
-record_arr.forEach((item, index)=>{
-  for(let subject_obj of record_arr2{
+record_arr.forEach((item, index) => {
+  for (let subject_obj of record_arr2) {
     let key = item.name;
-    let value = item[subject_obj.subjectname]
+    let value = item[subject_obj.subjectname];
     subject_obj[key] = value;
-  })
+  }
 });
 
 console.log(record_arr2);
